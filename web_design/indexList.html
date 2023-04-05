@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/Redmond/jquery-ui.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet">
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="listBody">
+	
+<header>
+	 <nav class="navbar navbar-inverse">
+	 	<span href="#" class="navbar-brand">Create Your Own Diat <span class="glyphicon glyphicon-home"></span></span>
+	 	<div id="mynav" class="navbar-collapse collapse">
+	 		<ul class="nav nav-tabs">
+	 			<li class="active"><a href="index.html"><span id="b" style="font-weight: bold">Home</span></a></li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Fitness Center</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexVideo.html"><span id="b">Video</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a"><span id="a">Designing your program</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexList.html"><span id="b">CheckList</span></a></li>
+	 				</ul>
+	 			</li>
+
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Calculate your Calorie</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexCal.html"><span id="b">Calculator</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">More information</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexLostWeight.html"><span id="b">Lose weight</span></a></li>
+	 					<li><a href="indexGetWeight.html"><span id="b">Get muscle</span></a></li>
+	 				</ul>
+	 			</li>
+	 		</ul>
+	 	</div>
+	 </nav>
+</header>
+	
+<!-- text -->
+<div class="listWrap1">
+	<div class="listHeader1">
+			<form name="login" action="http://httpbin.org/post" method="post">
+			<div>
+				<fieldset>
+				<legend><span id="listLegend">胸肌</span></legend>
+					<span id="listC">啞鈴臥推:</span><input class="listInput" type="number" value="0" id="c1"><br>
+					<span id="listC">槓鈴臥推:</span><input class="listInput" type="number" value="0" id="c2"><br>
+					<span id="listC">史密斯臥推:</span><input class="listInput" type="number" value="0" id="c3">
+				</fieldset>
+				<fieldset>
+				<legend><span id="listLegend">三頭肌</span></legend>
+					<span id="listC">滑索下壓:</span><input class="listInput" type="number" value="0" id="c4"><br>
+					<span id="listC">槓鈴上舉:</span><input class="listInput" type="number" value="0" id="c5"><br>
+					<span id="listC">頭頂三頭拉伸:</span><input class="listInput" type="number" value="0" id="c6">
+				</fieldset>
+				<fieldset>
+				<legend><span id="listLegend">二頭肌</span></legend>
+					<span id="listC">槓鈴彎舉:  </span><input class="listInput" type="number" value="0" id="c7"><br>
+					<span id="listC">啞鈴彎舉:</span><input class="listInput" type="number" value="0" id="c8"><br>
+					<span id="listC">正手引體向上:</span><input class="listInput" type="number" value="0" id="c9">
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+				<legend><span id="listLegend">背肌</span></legend>
+					<span id="listC">槓鈴划船:</span><input class="listInput" type="number" value="0" id="c10"><br>
+					<span id="listC">坐姿划船:</span><input class="listInput" type="number" value="0" id="c11">
+				</fieldset>
+				<fieldset>
+				<legend><sapn id="listLegend">腿部</sapn></legend>
+					<span id="listC">背槓深蹲:</span><input class="listInput" type="number" value="0" id="c12"><br>
+					<span id="listC">羅馬尼亞硬舉:</span><input class="listInput" type="number" value="0" id="c13">
+				</fieldset>
+				<fieldset>
+				<legend><span id="listLegend">核心</span></legend>
+					<span id="listC">棒式:</span><input class="listInput" type="number" value="0" id="c14"><br>
+					<span id="listC">捲腹:</span><input class="listInput" type="number" value="0" id="c15">
+				</fieldset>
+		 	</div>
+		</form>
+			<br><br>
+		<button id="listCalGrade">Total Scores</button>
+	</div>
+
+	<div class="listBody1">
+		<table class="listTable">
+		<tr class="listTr">
+			<td>
+				<strong>菜單安排順序<br></strong>(可用一週安排)
+			</td>
+			<td>
+				<br>
+				<strong>訓練肌群</strong>
+			</td>
+			<td>
+				<br>
+				<strong>動作一</strong>
+			</td>
+			<td>
+				<br>
+				<strong>動作二</strong>
+			</td>
+			<td>
+				<br>
+				<strong>動作三</strong>
+			</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>第一天</strong></td>
+			<td>胸</td>
+			<td>槓鈴胸推</td>
+			<td>啞鈴胸推</td>
+			<td>飛鳥夾胸</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>第二天</strong></td>
+			<td>腿</td>
+			<td>深蹲</td>
+			<td>腿推</td>
+			<td>分腿蹲</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>第三天</strong></td>
+			<td>手臂</td>
+			<td>槓鈴彎舉</td>
+			<td>三頭下壓</td>
+			<td>啞鈴斜上彎舉</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>休息</strong></td>
+			<td>X</td>
+			<td>X</td>
+			<td>X</td>
+			<td>X</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>第四天</strong></td>
+			<td>胸</td>
+			<td>槓鈴胸推</td>
+			<td>啞鈴胸推</td>
+			<td>飛鳥夾胸</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>第五天</strong></td>
+			<td>背</td>
+			<td>引體向上</td>
+			<td>站姿划船</td>
+			<td>羅馬尼亞硬舉</td>
+		</tr>
+		<tr class="listTr">
+			<td><strong>休息</strong></td>
+			<td>X</td>
+			<td>X</td>
+			<td>X</td>
+			<td>X</td>
+		</tr>
+	</table>
+	</div>
+
+	<div class="listFooter1">
+	</div>
+</div>
+
+
+<div id="listMyDialog">
+	<p id="list1"></p>
+</div>
+
+
+<!-- footer -->
+
+<div class="main-footer">
+	<div class="container">
+		<div class="footer-item">
+			<h4>Fitness Center</h4>
+			<nav>
+				<a href="indexVideo.html"><i class="fa fa-film" aria-hidden="true"></i>Video</a>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Designing Your Program</h4>
+			<nav>
+				<a href="indexList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i>CheckList</i></a>
+				<a href="indexGetWeight.html"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Get Muscle</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Calculate Your Calorie</h4>
+			<nav>
+				<a href="indexCal.html"><i class="fa fa-arrows" aria-hidden="true"></i>Calculator</a>
+				<a href="indexLostWeight.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i>Lost Weight</a>
+			</nav>
+		</div>
+		<div class="footer-item footer-subs">
+			<h4>More Information</h4>
+			<form>
+				<input type="text" name="">
+				<input type="submit" name="" value="搜尋">
+			</form>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyrught &copy; 2020黃誠恩健身網站
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+
+	$("#listMyDialog").dialog({autoOpen:false});
+
+	$("#listCalGrade").click(function()
+	{
+		console.log($("#c1").val());
+		console.log(60+$("#c1").val()*1.1+$("#c2").val()*1.3+$("#c3").val()*1.3+$("#c4").val()*0.9+$("#c5").val()*1.3+$("#c6").val()*0.9+$("#c7").val()*1.3+$("#c8").val()*1.1+$("#c9").val()*1.3+$("#c10").val()*1.3+$("#c11").val()*0.9+$("#c12").val()*1.5+$("#c13").val()*1.5+$("#c14").val()*1+$("#c15").val()*1);
+		var totalTimes=60+$("#c1").val()*1.1+$("#c2").val()*1.3+$("#c3").val()*1.3+$("#c4").val()*0.9+$("#c5").val()*1.3+$("#c6").val()*0.9+$("#c7").val()*1.3+$("#c8").val()*1.1+$("#c9").val()*1.3+$("#c10").val()*1.3+$("#c11").val()*0.9+$("#c12").val()*1.5+$("#c13").val()*1.5+$("#c14").val()*1+$("#c15").val()*1;
+		if(totalTimes>100)
+		{
+			totalTimes=100;
+		}
+		$("#list1").html("恭喜你今天獲得:"+totalTimes+"分!");
+		$("#listMyDialog").dialog('open');
+	})
+	
+</script>
+</body>
+</html>

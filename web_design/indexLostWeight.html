@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet">
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="bodyLost">
+
+<!-- 導覽列 -->
+
+<header>
+	 <nav class="navbar navbar-inverse">
+	 	<span href="#" class="navbar-brand">Create Your Own Diat <span class="glyphicon glyphicon-home"></span></span>
+	 	<div id="mynav" class="navbar-collapse collapse">
+	 		<ul class="nav nav-tabs">
+	 			<li class="active"><a href="index.html"><span id="b" style="font-weight: bold">Home</span></a></li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Fitness Center</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexVideo.html"><span id="b">Video</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a"><span id="a">Designing your program</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexList.html"><span id="b">CheckList</span></a></li>
+	 				</ul>
+	 			</li>
+
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Calculate your Calorie</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexCal.html"><span id="b">Calculator</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">More information</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexLostWeight.html"><span id="b">Lose weight</span></a></li>
+	 					<li><a href="indexGetWeight.html"><span id="b">Get muscle</span></a></li>
+	 				</ul>
+	 			</li>
+	 		</ul>
+	 	</div>
+	 </nav>
+</header>
+
+<!-- text -->
+
+<div class="wrap1Lost">
+	<div class="item1Lost">
+		<img src="背景1.jpg">
+		<div class="txt1">
+			<h2>飲食，重訓，有氧運動</h2>
+			<p>1.要有效減脂的話，我們就需吃到低於TDEE大約10%-20%<br>2.在減脂期間的重量訓練建議多練高强度（重量大）且低次數的多關節運動例如深蹲，硬擧，臥推，肩推，下拉以及划船等訓練<br>3.高强度有氧間歇運動(ex:TABATA)將會是最佳的選擇</p>
+			<button id="bu" type="button" onclick="window.open('https://fitnesstwenty.com/tabata/','_blank')">什麼是TABATA?</button>
+		</div>
+	</div>
+	<div class="item1Lost">
+		<img src="背景2.jpg">
+		<div class="txt1">
+			<h2>睡眠，體態追蹤</h2>
+			<p>1.睡眠不足的話會因體内胰島素分泌增加，造成更容易囤積脂肪<br>2.睡眠不足會導致體内荷爾蒙分泌失調，例如飢餓素增加，使人更容易飢餓而攝取更多熱量<br>3.切勿把目標設得太高，應該把目標設成自己能夠盡力完成的，也切勿一開始就進行高度且極端的減脂法</p>
+			<button id="bu" type="button"  onclick="window.open('https://fitnesstwenty.com/sleep/', '_blank')">如何促進睡眠品質</button>
+		</div>
+	</div>
+	<div class="item1Lost">
+		<img src="背景3.jpg">
+		<div class="txt1">
+			<h2>減脂VS減肥</h2>
+			<p>減脂:<br>每日消耗熱量>每日攝取熱量,計算營養素並攝取,不節食
+				,減去體脂肪肌肉能夠維持<br>減肥:<br>沒計算熱量，節食，可能流失肌肉，追求體重機上的數字</p>
+			<button id="bu" type="button" onclick="window.open('https://fitnesstwenty.com/fat-loss/','_blank')">減脂與減肥差別</button>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+
+<div class="main-footer">
+	<div class="container">
+		<div class="footer-item">
+			<h4>Fitness Center</h4>
+			<nav>
+				<a href="indexVideo.html"><i class="fa fa-film" aria-hidden="true"></i>Video</a>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Designing Your Program</h4>
+			<nav>
+				<a href="indexList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i>CheckList</i></a>
+				<a href="indexGetWeight.html"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Get Muscle</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Calculate Your Calorie</h4>
+			<nav>
+				<a href="indexCal.html"><i class="fa fa-arrows" aria-hidden="true"></i>Calculator</a>
+				<a href="indexLostWeight.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i>Lost Weight</a>
+			</nav>
+		</div>
+		<div class="footer-item footer-subs">
+			<h4>More Information</h4>
+			<form>
+				<input type="text" name="">
+				<input type="submit" name="" value="搜尋">
+			</form>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyrught &copy; 2020黃誠恩健身網站
+	</div>
+</div>
+
+</body>
+
+</html>

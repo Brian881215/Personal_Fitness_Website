@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cal</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/Redmond/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="calBody">
+
+<!-- 導覽列 -->
+
+<header>
+	 <nav class="navbar navbar-inverse">
+	 	<span href="#" class="navbar-brand">Create Your Own Diat <span class="glyphicon glyphicon-home"></span></span>
+	 	<div id="mynav" class="navbar-collapse collapse">
+	 		<ul class="nav nav-tabs">
+	 			<li class="active"><a href="index.html"><span id="b" style="font-weight: bold">Home</span></a></li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Fitness Center</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexVideo.html"><span id="b">Video</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a"><span id="a">Designing your program</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexList.html"><span id="b">CheckList</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Calculate your Calorie</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexCal.html"><span id="b">Calculator</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">More information</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexLostWeight.html"><span id="b">Lose weight</span></a></li>
+	 					<li><a href="indexGetWeight.html"><span id="b">Get muscle</span></a></li>
+	 				</ul>
+	 			</li>
+	 		</ul>
+	 	</div>
+	 </nav>
+</header>
+	
+<!-- 視窗呈現dialog -->
+
+	<div id="myDialog">
+		<p id="1"></p>
+	</div>
+	<div id="myDialog1">
+		<p id="2"></p>
+	</div>
+<!-- --------- -->
+
+<body>
+	<div class="wrapCal">
+		<div class="HeaderCal">
+			<div id="c123">
+				<span id="c">身高(cm):</span><input type="number" id="c1">
+				<span id="c">體重(kg):</span><input type="number" id="c2">
+				<span id="c">年齡(year):</span><input type="number" id="c3">
+				<br>
+				<br>
+				<span id="c">性別：</span>
+			    <input type="radio"  value="male" name="gender" class="gender1" checked>
+			    <label for="male"><span id="c">男性</span></label>
+			    <input type="radio" value="female" name="gender" class="gender1">
+			    <label for="female" ><span id="c">女性</span></label>
+			    <br>
+			    <br>
+				<button id="d">你的基礎代謝</button><div id="DailyCal"></div>
+			</div>
+		</div>
+		<div class="SitebarCal">
+			<img src="熱量.jpg">
+		</div>
+		<div class="BodyCal">
+			<div id="cCal">
+				<span id="cc">Today's Calorie:</span><span id="list"></span>
+				<table>
+				<tr>
+					<td><button id="CalButton" onclick="clean()">Clear</button></td>
+					<td><button id="CalButton" onclick=" add('(') ">(</button></td>
+					<td><button id="CalButton" onclick=" add(')') ">)</button></td>
+				<tr>
+					<td><button id="CalButton" onclick=" add('1') ">1</button></td>
+					<td><button id="CalButton" onclick=" add('2') ">2</button></td>
+					<td><button id="CalButton" onclick=" add('3')">3</button></td>
+					<td><button id="CalButton" onclick=" add('+')">+</button></td>
+				<tr>
+					<td><button id="CalButton" onclick=" add('4')">4</button></td>
+					<td><button id="CalButton" onclick=" add('5')">5</button></td>
+					<td><button id="CalButton" onclick=" add('6')">6</button></td>
+					<td><button id="CalButton" onclick=" add('-')">-</button></td>
+				<tr>
+					<td><button id="CalButton" onclick=" add('7')">7</button></td>
+					<td><button id="CalButton" onclick=" add('8')">8</button></td>
+					<td><button id="CalButton" onclick=" add('9')">9</button></td>
+					<td><button id="CalButton" onclick=" add('*')">x</button></td>
+				<tr>
+					<td><button id="CalButton" onclick=" add('.')">.</button></td>
+					<td><button id="CalButton" onclick=" add('0')">0</button></td>
+					<td><button id="CalButton" onclick=" sum()">=</button></td>
+					<td><button id="CalButton" onclick=" add('/')">/</button></td>
+				</table>
+			</div>
+		</div>
+		<div class="clearfix">
+		</div>
+		<div class="footerCal">
+			<img src="TEDD.jpg">
+			<h2>維持體重：每天吃到TDEE的熱量</h2><h2>增加肌肉：每天吃到TDEE+300卡路里的熱量</h2>
+			<h2>減少脂肪：每天吃到TDEE-300卡路里的熱量</h2>
+			<br>
+			<p id="tdee">基礎代謝率會隨著年齡增加或體重減輕而降低,<br>而隨著肌肉增加而增加。疾病、進食,環境溫度變化,<br>承受壓力水平變化都會改變人體的能量消耗,<br>從而影響基礎代謝率!</p>
+		</div>
+	</div>
+</body>
+
+<!-- footer -->
+
+<div class="main-footer">
+	<div class="container">
+		<div class="footer-item">
+			<h4>Fitness Center</h4>
+			<nav>
+				<a href="indexVideo.html"><i class="fa fa-film" aria-hidden="true"></i>Video</a>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Designing Your Program</h4>
+			<nav>
+				<a href="indexList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i>CheckList</i></a>
+				<a href="indexGetWeight.html"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Get Muscle</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Calculate Your Calorie</h4>
+			<nav>
+				<a href="indexCal.html"><i class="fa fa-arrows" aria-hidden="true"></i>Calculator</a>
+				<a href="indexLostWeight.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i>Lost Weight</a>
+			</nav>
+		</div>
+		<div class="footer-item footer-subs">
+			<h4>More Information</h4>
+			<form>
+				<input type="text" name="">
+				<input type="submit" name="" value="搜尋">
+			</form>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyrught &copy; 2020黃誠恩健身網站
+	</div>
+</div>
+
+<!-- script -->
+
+<script type="text/javascript">
+
+	$("#d").click(function()
+	{
+		var boyCal=(10*$("#c2").val()+6.25*$("#c1").val()-5*$("#c3").val()+5);
+		var c1=$("#c1").val();
+		console.log($('input[class="gender1"]:checked').val());
+		if($('input[class="gender1"]:checked').val()=="male")
+		{
+			var boyCal=(10*$("#c2").val()+6.25*$("#c1").val()-5*$("#c3").val()+5);
+			$("#d").attr("value",boyCal);
+			console.log($("#d").val());
+			$("#2").html("您的基礎代謝: "+boyCal);
+			$("#myDialog1").dialog('open');	
+		}
+		else
+		{
+			var girlCal=(10*$("#c2").val()+6.25*$("#c1").val()-5*$("#c3").val()-161);
+			$("#d").attr("value",girlCal);
+			console.log($("#d").val());
+			$("#2").html("妳的基礎代謝是: "+girlCal);
+			$("#myDialog1").dialog('open');
+			$(".ui-dialog-buttonpane").find('button:contains("aaa")').css("width","30px");
+			return false;
+		}
+	})
+	
+	function add(chr)
+	{
+		var list=document.getElementById('list');
+		list.innerHTML +=chr;
+	}
+
+	var x=0;
+
+	function sum()
+	{
+		var list=document.getElementById('list');
+		if(list.innerHTML === "")
+		{ 
+		   return;
+		}
+		x+=eval(list.innerHTML);
+		console.log(x);
+		list.innerHTML=x;
+		if(x>$("#d").val())
+		{
+			var x1=x-$("#d").val();
+			$("#1").html("你已經吃超過: "+x1+"大卡喽!");
+			$("#myDialog").dialog('open');
+		}
+	}
+
+	function clean()
+	{
+		var list=document.getElementById('list');
+		list.innerHTML="";
+	}
+
+	$("#myDialog").dialog({autoOpen:false});
+
+	$("#myDialog1").dialog(
+		{
+			model:true,autoOpen: false,title:"<Keep diating>",
+			buttons:
+			{
+				"増肌": function()
+				{
+					window.location="indexGetWeight.html";
+				},
+				"減脂": function()
+				{
+					window.location="indexLostWeight.html";
+				},
+				"再看看": function() 
+				{
+					$(this).dialog("close");
+				}
+			}	
+		}
+	);
+	
+</script>
+</body>
+</html>

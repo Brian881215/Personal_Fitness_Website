@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Project</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <style type="text/css">
+		
+		*
+		{
+			margin:0;
+			padding:0;
+			list-style: none;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+/*導覽列*/
+		#a
+		{
+			font-size: 20px;
+			color: white;
+		}
+		#a:hover
+		{
+			color: black;
+		}
+		.navbar-brand
+		{
+			font-size: 22px;
+			font-weight: bold
+		}
+		#b
+		{
+			color: black;
+			font-size: 20px
+		}
+
+	
+/*text*/
+		.indexBody
+		{
+			background-color: #212121;
+			/*background-color: rgba(231,280,230,0.5);*/
+			/*background-image:url("p1.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size:cover;
+			width: 100%;
+*/			/*margin: 0;
+			padding: 0;*/
+		}
+
+		.banner
+		{
+			width: 100%;
+			height: 700px;
+			background-color: #ccc;
+			/*background: linear-gradient(135deg,#7bf 50%,transparent 50%);版面斜的*/
+			/*90deg可以自己調成想要角度*/
+			background: linear-gradient(135deg, #7bf 40%,transparent 80%) center center / 100% 100%,
+			url("質感3.jpg") right center / auto 100%;
+
+		}
+		.container
+		{
+			width:100%;
+			max-width: 1440px;
+			height: 100%;
+			margin: auto;
+		}
+		.banner-text
+		{
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:flex-start;
+		}
+		.banner-text h1
+		{
+			font-size: 80px;
+			border-bottom: 1px solid #333;
+			font-weight: 700;
+			padding-bottom: .3em;
+			margin-bottom: .3em;
+		}
+		.banner-text h1 small
+		{
+			display: block;
+			font-size: 53px;
+			font-weight: 500;
+
+		}
+		.banner-text h2
+		{
+			font-size: 50px;
+			font-weight: 500;
+		}
+		.banner-text p
+		{
+			font-size: 30px;
+			font-weight: 300;
+		}
+
+
+		.wrapIndex
+		{
+			width: 100%;
+			display: flex;
+		}
+		.itemIndex
+		{
+			width: 25%;
+			position: relative;
+		}
+		.itemIndex img
+		{
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;
+		}
+		.itemIndex .txt
+		{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 20px;
+			background-color: rgba(0,0,0,.6);
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			opacity: 0;
+			transition: opacity .5s;
+		}
+		.itemIndex:hover .txt{
+			opacity: 1;
+		}
+		.itemIndex .txt h2{
+			font-size: 28px;
+			color: #ff0;
+			font-weight: 500; 
+		}
+		.itemIndex h2:after{
+			content: '';
+			display: block;
+			width: 0%;
+			height: 2px;
+			margin: 10px 0;
+			background-color: #ff0;
+			transition: width .5s .3s;
+		}
+		.itemIndex:hover h2:after{
+			width: 100%;
+		}
+		.itemIndex p{
+			font-size: 18px;
+			color:#fff;
+			font-weight: 100;
+		}
+
+
+/*footer*/
+		.main-footer
+		{
+			padding: 100px 0 0 0;
+			/*background: linear-gradient(-20deg,#3f5494,#08c7a5);*/
+			background-color: #212121;
+		}
+        .main-footer .container
+		{
+			display: flex;
+			/*width: 1200px;*/
+			width:100%;
+			margin: auto;
+		}
+		.footer-item
+		{
+			width: 0;
+			flex-grow: 1;
+			margin: 0 20px;
+		}      
+		.footer-item nav
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		.footer-item h4
+		{
+			font-size: 24px;
+			color: #fff;
+			border-bottom: 1px dotted #fff;
+			margin-bottom: .5em;
+			padding-bottom: .5em;
+
+		}
+		.footer-item nav a
+		{
+			color: #fff;
+			line-height: 1.4;
+			text-decoration: none;
+			padding: 5px 0;
+			font-size: 16px;
+		}
+		.footer-item nav a:hover
+		{
+			color: #fa0;
+		}
+		.footer-subs
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		.footer-subs form
+		{
+			display: flex;
+			width: 100%;
+			margin: auto 0px;
+		}
+		.footer-subs input[type="text"],
+		.footer-subs input[type="submit"]
+		{
+			border: none;
+			padding: 5px 10px;
+		}
+		.footer-subs input[type="text"]
+		{
+			width: 0;
+			flex-grow: 1;
+		}
+		.footer-subs input[type="submit"]
+		{
+			color: #70f6df;
+			background-color: #3e5293;
+		}
+		.copyright
+		{
+			width: 100%;
+			text-align: center;
+			margin: 150px 0 0;
+			padding: 10px 0px;
+			background-color: #3e5293;
+			color: #70f6df;
+		}
+	</style>
+ -->
+</head>
+<body class="indexBody">
+
+<!-- 導覽列 -->
+
+<header>
+	 <nav class="navbar navbar-inverse">
+	 	<span href="#" class="navbar-brand">Create Your Own Diat <span class="glyphicon glyphicon-home"></span></span>
+	 	<div id="mynav" class="navbar-collapse collapse">
+	 		<!-- <ul class="navbar-nav nav"> -->
+	 		<ul class="nav nav-tabs">
+	 			<li class="active"><a href="index.html"><span id="b" style="font-weight: bold">Home</span></a></li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Fitness Center</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexVideo.html"><span id="b">Video</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a"><span id="a">Designing your program</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexList.html"><span id="b">CheckList</span></a></li>
+	 				</ul>
+	 			</li>
+
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Calculate your Calorie</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexCal.html"><span id="b">Calculator</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">More information</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexLostWeight.html"><span id="b">Lose weight</span></a></li>
+	 					<li><a href="indexGetWeight.html"><span id="b">Get muscle</span></a></li>
+	 				</ul>
+	 			</li>
+	 		</ul>
+	 	</div>
+	 </nav>
+</header>
+
+<!-- text -->
+
+<div class="banner">
+	<div class="container">
+		<div class="banner-text">
+			<h1>
+				AMBITION
+				<small>
+					Lose fat,get muscle
+				</small>
+			</h1>
+			<h2>Creating</h2>
+			<p>
+				your infinite<br>posibility
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="wrapIndex">
+		<div class="itemIndex">
+			<img src="健身1.jpg">
+			<div class="txt">
+				<h2>各部位分法</h2>
+				<p>胸腿手肩背，休一天循環，可加強針對小肌群，好上手,但肌肉提收較慢，且只能練一次</p>
+			</div>
+		</div>
+		<div class="itemIndex">
+			<img src="健身2.jpg">
+			<div class="txt">
+				<h2>推拉腿分法</h2>
+				<p>胸肩三頭為一天，背二頭為一天，腿加核心肌群為一天，頻率高且肌肉量進步較快</p>
+			</div>
+		</div>
+		<div class="itemIndex">
+			<img src="健身3.jpg">
+			<div class="txt">
+				<h2>上下分法</h2>
+				<p>一次上半身一次下半身在休息，但一次可能會花比較久，較難針對小肌群</p>
+			</div>
+		</div>
+		<div class="itemIndex">
+			<img src="健身4.jpg">
+			<div class="txt">
+				<h2>波動型練法</h2>
+				<p>分成三日，肌肥大日，爆發力日，肌力日，為健力三項大爆發</p>
+			</div>
+		</div>
+	</div>
+
+<!-- footer -->
+
+<div class="main-footer">
+	<div class="container">
+		<div class="footer-item">
+			<h4>Fitness Center</h4>
+			<nav>
+				<a href="indexVideo.html"><i class="fa fa-film" aria-hidden="true"></i>Video</a>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Designing Your Program</h4>
+			<nav>
+				<a href="indexList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i>CheckList</i></a>
+				<a href="indexGetWeight.html"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Get Muscle</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Calculate Your Calorie</h4>
+			<nav>
+				<a href="indexCal.html"><i class="fa fa-arrows" aria-hidden="true"></i>Calculator</a>
+				<a href="indexLostWeight.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i>Lost Weight</a>
+			</nav>
+		</div>
+		<div class="footer-item footer-subs">
+			<h4>More Information</h4>
+			<form>
+				<input type="text" name="">
+				<input type="submit" name="" value="搜尋">
+			</form>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyrught &copy; 2020黃誠恩健身網站
+	</div>
+</div>
+
+</body>
+</html>

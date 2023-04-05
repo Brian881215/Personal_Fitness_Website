@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/Redmond/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <style type="text/css">
+
+		*
+		{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+
+/*導覽列*/
+		
+		#a{
+			font-size: 20px;
+			color: white;
+		}
+		#a:hover
+		{
+			color: black;
+		}
+		.navbar-brand
+		{
+			font-size: 22px;
+			font-weight: bold;
+		}
+		#b
+		{
+			color: black;
+			font-size: 20px;
+		}
+
+/*text*/
+
+		.videoBody
+		{
+			background-color: black;
+			background-blend-mode: multiply;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size:cover;
+			width: 100%;
+		}
+		.wrapVideo
+		{
+		padding-top: 100px;
+		width: 1200px;
+		margin: 0 auto;
+		}
+		.headerVideo{
+			/*background: yellow;*/
+			height: 400px;
+			text-align: center;
+			width: 1200px;	
+			margin-bottom: 100px;
+		}
+		.body1Video
+		{
+			background: white;
+
+			height: 400px;
+			text-align: center;
+			/*line-height: 100px;*/
+			width: 1200px;
+			/*display: inline-block;*/
+			margin-bottom: 100px;
+			background: rgba(255,255,255,0.05);
+		}
+		.body2Video
+		{
+			background: white;
+			background: rgba(255,255,255,0.05);
+			height: 400px;
+			width: 1200px;
+			text-align: center;
+			/*line-height: 300px;*/
+			margin-bottom: 100px;
+		}
+		.body3Video
+		{
+			background: white;
+			height: 400px;
+			width: 1200px;
+			text-align: center;
+			/*line-height: 100px;*/
+			margin-bottom: 100px;
+			background: rgba(255,255,255,0.05);
+		}
+		.body4Video
+		{
+			background: white;
+			height: 400px;
+			width: 1200px;
+			text-align: center;
+			/*line-height: 100px;*/
+			margin-bottom: 100px;
+			background: rgba(255,255,255,0.05);
+		}
+		.body5Video
+		{
+			background: white;
+			height: 400px;
+			width: 1200px;
+			text-align: center;
+			/*line-height: 100px;*/
+			margin-bottom: 100px;
+			background: rgba(255,255,255,0.05);
+		}
+		.body6Video
+		{
+			background: white;
+			height: 400px;
+			width: 1200px;
+			text-align: center;
+			/*line-height: 100px;*/
+			margin-bottom: 100px;
+			background: rgba(255,255,255,0.05);
+		}
+		iframe
+		{
+			width:500px;
+			height:300px;
+		}
+		#my_tabsVideo
+		{
+			width:550px;
+			margin: 0 auto;
+		}
+		#spanVideo
+		{
+			font-size: 19px;
+		}
+		div #even
+		{
+			width: 600px;
+			float: left;
+			height: 100%;
+		}
+		div #odd
+		{
+			width: 600px;
+			float: right;
+			height: 100%;
+		}
+		.txtVideo p,h1,h2
+		{
+			/*display: inline;*/
+			color: white;
+		}
+		.txtVideo h2:hover
+		{
+			/*display: inline;*/
+			color: #fa0;
+		}
+		.txtVideo h1:hover
+		{
+			/*display: inline;*/
+			color: #fa0;
+		}
+		.txtVideo p:hover
+		{
+			/*display: inline;*/
+			color: #fa0;
+		}
+		.txtVideo h1
+		{
+			padding: 15px;
+			color: #fa0;
+		}
+		.txtVideo p
+		{
+			font-size: 20px;
+		}
+
+/*footer*/
+
+		.main-footer
+		{
+			padding: 100px 0 0 0;
+			background-color: #212121;
+		}
+        .main-footer .container
+		{
+			display: flex;
+			width:100%;
+			margin: auto;
+		}
+		.footer-item
+		{
+			width: 0;
+			flex-grow: 1;
+			margin: 0 20px;
+		}      
+		.footer-item nav
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		.footer-item h4
+		{
+			font-size: 24px;
+			color: #fff;
+			border-bottom: 1px dotted #fff;
+			margin-bottom: .5em;
+			padding-bottom: .5em;
+		}
+		.footer-item nav a
+		{
+			color: #fff;
+			line-height: 1.4;
+			text-decoration: none;
+			padding: 5px 0;
+			font-size: 16px;
+		}
+		.footer-item nav a:hover
+		{
+			color: #fa0;
+		}
+		.footer-subs
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		.footer-subs form
+		{
+			display: flex;
+			width: 100%;
+			margin: auto 0px;
+		}
+		.footer-subs input[type="text"],
+		.footer-subs input[type="submit"]
+		{
+			border: none;
+			padding: 5px 10px;
+		}
+		.footer-subs input[type="text"]
+		{
+			width: 0;
+			flex-grow: 1;
+		}
+		.footer-subs input[type="submit"]
+		{
+			color: #70f6df;
+			background-color: #3e5293;
+		}
+		.copyright
+		{
+			width: 100%;
+			text-align: center;
+			margin: 150px 0 0;
+			padding: 10px 0px;
+			background-color: #3e5293;
+			color: #70f6df;
+		}	
+	</style> -->
+</head>
+
+<body class="videoBody">
+
+<!-- 導覽列 -->
+
+<header>
+	 <nav class="navbar navbar-inverse">
+	 	<span href="#" class="navbar-brand">Create Your Own Diat <span class="glyphicon glyphicon-home"></span></span>
+	 	<div id="mynav" class="navbar-collapse collapse">
+	 		<ul class="nav nav-tabs">
+	 			<li class="active" ><a href="index.html"><span id="b" style="font-weight: bold">Home</span></a></li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Fitness Center</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="#"><span id="b">Video</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a"><span id="a">Designing your program</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexList.html"><span id="b">CheckList</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">Calculate your Calorie</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexCal.html"><span id="b">Calculator</span></a></li>
+	 				</ul>
+	 			</li>
+	 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="a">More information</span><span class="caret"></span></a>
+	 				<ul class="dropdown-menu">
+	 					<li><a href="indexLostWeight.html"><span id="b">Lose weight</span></a></li>
+	 					<li><a href="indexGetWeight.html"><span id="b">Get muscle</span></a></li>
+	 				</ul>
+	 			</li>
+	 		</ul>
+	 	</div>
+	 </nav>
+</header>
+
+<!-- text -->
+
+<div class="wrapVideo">
+		<div class="headerVideo">
+			<div id="my_tabsVideo">
+				<ul>
+					<li><a href="#tab1"><span id="spanVideo">胸部<span></a></li>
+					<li><a href="#tab2"><span id="spanVideo">三頭肌</span></a></li>
+					<li><a href="#tab3"><span id="spanVideo">二頭肌</span></a></li>
+					<li><a href="#tab4"><span id="spanVideo">背肌</span></a></li>
+					<li><a href="#tab5"><span id="spanVideo">腿部</span></a></li>
+					<li><a href="#tab6"><span id="spanVideo">核心</span></a></li>
+				</ul>
+				<iframe id="tab1" src="https://www.youtube.com/embed/nKjAD5hN3Go" ></iframe>
+				<iframe id="tab2" src="https://www.youtube.com/embed/qmU0tXkWqEM" allowtransparency="true"></iframe>
+				<iframe id="tab3" src="https://www.youtube.com/embed/Mpt6Ye1-qDk" allowtransparency="true"></iframe>
+				<iframe id="tab4" src="https://www.youtube.com/embed/7VNXgyu4s6g" allowtransparency="true"></iframe>
+				<iframe id="tab5" src="https://www.youtube.com/embed/_gjkeqoUsGE" allowtransparency="true"></iframe>
+				<iframe id="tab6" src="https://www.youtube.com/embed/Fs1MMJ3X4Rc" allowtransparency="true"></iframe>
+			</div>		
+		</div>
+		<div class="body1Video">
+			<img src="胸.jpg" id="odd">
+			<div class="txtVideo">
+				<h1>胸肌訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.肘部向外太多<br>2.太專注於槓鈴訓練<br>3.達到固定的次數就停下<br>4.沒有做單邊訓練的習慣</p>
+				<h2><<注意事項>></h2>
+				<p>胸肌的肌肉組織分為5個部分,<br>上胸、中胸、下胸、中胸溝和胸部外側,<br>必須刺激到這些部位才能有效增的増大胸肌。</p>
+			</div>
+		</div>
+		<div class="body2Video">
+			<img src="三頭.jpg" id="even">
+			<div class="txtVideo">
+				<h1>三頭肌訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.聳肩<br>2.手腕沒完全伸直<br>3.長頭激活不足<br>4.肘部無固定在同一位置</p>
+				<h2><<注意事項>></h2>
+				<p>三頭肌的肌肉組織有三個部位,<br>分別是長頭、內側頭和外側頭,<br>想要練得粗大就必須有效地刺激這三個部位。</p>
+			</div>
+		</div>
+		<div class="body3Video">
+			<img src="二頭.jpg" id="odd">
+			<div class="txtVideo">
+				<h1>二頭肌訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.肌肉代償<br>2.無法承受重量<br>3.沒有完整軌跡<br>4.過度使用動量</p>
+				<h2><<注意事項>></h2>
+				<p>二頭肌有分長頭和短頭,<br>而多半上半身的訓練都有肩關節的參與,<br>所以可以先選輕重量暖身開來!</p>
+			</div>
+		</div>
+		<div class="body4Video">
+			<img src="背部圖片.jpg" id="even">
+			<div class="txtVideo">
+				<h1>背肌訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.圓背<br>2.忽略下背的訓練<br>3.過度擺動或向後傾斜<br>4.伸展範圍不夠完整</p>
+				<h2><<練背好處>></h2>
+				<p>訓練背部肌肉讓我們的身體線條更好看,<br>尤其是豎脊肌對我們非常的重要,<br>它可讓我們有良好的姿勢和改善下背的疼痛。</p>
+			</div>
+		</div>
+		<div class="body5Video">
+			<img src="腿.jpg" id="odd">
+			<div class="txtVideo">
+				<h1>腿部訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.膝蓋內扣<br>2.圓背弓腰<br>3.下蹲身度不夠<br>4.重心放在前腳掌</p>
+				<h2><<練腿好處>></h2>
+				<p>不僅可以提升全身的力量，也可促進肌肉生長，<br>提高肢體的活動，<br>甚至可燃燒更多脂肪</p>
+			</div>
+		</div>
+		<div class="body6Video">
+			<img src="腹部.jpg" id="even">
+			<div class="txtVideo">
+				<h1>腹肌訓練</h1>
+				<h2><<易犯錯誤>></h2>
+				<p>1.抱著頭的姿勢<br>2.未搭配良好的呼吸<br>3.沒感受自己的腹肌<br>4.過度用手來協助訓練</p>
+				<h2><<注意事項>></h2>
+				<p>腹肌包括腹直肌、腹外斜肌、腹內斜肌和腹橫肌,<br>單靠訓練腹肌是不足夠的,<br>我們還需搭配好的飲食才能讓腹肌更快的成長</p>
+			</div>
+		</div>
+</div>
+
+<!-- footer -->
+
+<div class="main-footer">
+	<div class="container">
+		<div class="footer-item">
+			<h4>Fitness Center</h4>
+			<nav>
+				<a href="indexVideo.html"><i class="fa fa-film" aria-hidden="true"></i>Video</a>
+				<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Designing Your Program</h4>
+			<nav>
+				<a href="indexList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i>CheckList</i></a>
+				<a href="indexGetWeight.html"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Get Muscle</a>
+			</nav>
+		</div>
+		<div class="footer-item">
+			<h4>Calculate Your Calorie</h4>
+			<nav>
+				<a href="indexCal.html"><i class="fa fa-arrows" aria-hidden="true"></i>Calculator</a>
+				<a href="indexLostWeight.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i>Lost Weight</a>
+			</nav>
+		</div>
+		<div class="footer-item footer-subs">
+			<h4>More Information</h4>
+			<form>
+				<input type="text" name="">
+				<input type="submit" name="" value="搜尋">
+			</form>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyrught &copy; 2020黃誠恩健身網站
+	</div>
+</div>
+
+
+<!-- script -->
+
+
+<script type="text/javascript">
+	$("#my_tabsVideo").tabs(
+	{
+		heightStyle: "content"
+	}
+	);
+</script>
+
+</body>
+</html>
